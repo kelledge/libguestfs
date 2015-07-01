@@ -12636,6 +12636,23 @@ removed from the filesystem.
 The C<targetdev> needs to be same size or larger than the C<srcdev>. Devices
 which are currently mounted are never allowed to be used as the C<targetdev>." };
 
+  { defaults with
+    name = "mkfs_vfat"; added = (1, 29, 48);
+    style = RErr, [Device "device"], [OInt "fatsize"];
+    proc_nr = Some 456;
+    shortdesc = "make a msdos filesystem";
+    longdesc = "\
+This function creates a msdos filesystem on C<device>.
+
+The optional arguments are:
+
+=over 4
+
+=item C<fatsize>
+Specifies  the  type  of file allocation tables used (12, 16 or 32 bit).
+
+=back" };
+
 ]
 
 (* Non-API meta-commands available only in guestfish.

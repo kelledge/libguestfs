@@ -103,6 +103,7 @@ guestfsd_SOURCES = \
 	df.c \
 	dir.c \
 	dmesg.c \
+	dosfs.c \
 	dropcaches.c \
 	du.c \
 	echo-daemon.c \
